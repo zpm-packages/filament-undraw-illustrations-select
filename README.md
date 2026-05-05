@@ -1,4 +1,4 @@
-<img width="2048" height="1170" alt="image" src="https://github.com/user-attachments/assets/8afcb5b3-d8e1-4b15-8c9a-d8cc9d08b092" />
+<img width="2560" height="1440" alt="undraw" src="https://github.com/user-attachments/assets/82ecc201-5074-49d6-9b8e-c095ade32743" />
 
 # Filament Undraw (ZPMLabs)
 
