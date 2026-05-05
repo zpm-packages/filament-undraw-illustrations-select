@@ -1,8 +1,8 @@
-<img width="2048" height="1170" alt="image" src="https://github.com/user-attachments/assets/8afcb5b3-d8e1-4b15-8c9a-d8cc9d08b092" />
+<img width="2560" height="1440" alt="undraw" src="https://github.com/user-attachments/assets/84f693ae-15a2-4b1f-a783-5def9fb57eb4" />
 
 # Filament Undraw (ZPMLabs)
 
-A Filament v5 select component that lets you search and pick [unDraw](https://undraw.co/) illustrations with image thumbnails in the dropdown and in the selected value.
+A Filament select component that lets you search and pick [unDraw](https://undraw.co/) illustrations with image thumbnails in the dropdown and in the selected value.
 
 > PHP 8.2+, Filament Forms 5.x.
 
