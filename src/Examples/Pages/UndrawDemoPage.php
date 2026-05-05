@@ -6,6 +6,8 @@ use BackedEnum;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 use ZPMLabs\FilamentUndraw\Forms\Components\UndrawSelect;
 
 /**
@@ -15,7 +17,9 @@ class UndrawDemoPage extends Page
 {
     protected string $view = 'filament-undraw::examples.pages.undraw-demo-page';
 
-    protected static string | BackedEnum | null $navigationIcon = null;
+    protected static string | BackedEnum | null $navigationIcon = Heroicon::OutlinedPhoto;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Examples';
 
     protected static ?string $navigationLabel = 'Undraw Demo';
 

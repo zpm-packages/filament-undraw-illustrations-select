@@ -14,6 +14,26 @@ A Filament v5 select component that lets you search and pick [unDraw](https://un
 composer require zpmlabs/filament-undraw
 ```
 
+## Filament theme setup
+
+If your Filament panel uses a custom Tailwind theme, add both package paths to your theme file so Tailwind can see the classes used by the package:
+
+```css
+@source '../../../../vendor/zpmlabs/filament-undraw/src/**/*';
+@source '../../../../vendor/zpmlabs/filament-undraw/resources/views/**/*';
+```
+
+Both are needed for different reasons:
+
+- `src/**/*` is required because the field component stores configurable utility classes like `w-24 h-24` and `w-40 h-40` inside PHP strings.
+- `resources/views/**/*` is required because the packaged demo page view uses Tailwind classes directly in Blade.
+
+After adding the sources, rebuild your assets:
+
+```bash
+npm run build
+```
+
 ## Version support
 
 - `main` / `v5.x` tags: Filament 5
