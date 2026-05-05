@@ -2,9 +2,9 @@
 
 # Filament Undraw (ZPMLabs)
 
-A Filament v4 select component that lets you **search & pick** [unDraw](https://undraw.co/) illustrations with **image thumbnails** in the dropdown and in the selected value.
+A Filament v5 select component that lets you search and pick [unDraw](https://undraw.co/) illustrations with image thumbnails in the dropdown and in the selected value.
 
-> PHP 8.1+, Filament Forms 4.x.
+> PHP 8.2+, Filament Forms 5.x.
 
 ---
 
@@ -13,6 +13,11 @@ A Filament v4 select component that lets you **search & pick** [unDraw](https://
 ```bash
 composer require zpmlabs/filament-undraw
 ```
+
+## Version support
+
+- `main` / `v5.x` tags: Filament 5
+- `v4` branch / `v4.x` tags: Filament 4
 
 ### If you want to customize the view:
 
@@ -25,14 +30,44 @@ php artisan vendor:publish --tag=filament-undraw-views
 ## Usage
 
 ```php
-
 use ZPMLabs\FilamentUndraw\Forms\Components\UndrawSelect;
-
 
 UndrawSelect::make('svg_url'),
 ```
 
-*** Since this is a select component, you can use other chaining methods, but keep in mind, this one has a custom view with custom styles and same official  component. ***
+Since this extends Filament's `Select`, you can keep using the usual fluent methods alongside the custom thumbnail layout.
+
+## Ready-to-use demo page
+
+The package ships with an example Filament page you can mount directly in your panel:
+
+```php
+use CommunitySdks\UnlayerFilament\Examples\Pages\UnlayerFilamentDemoPage;
+use Filament\Pages\Dashboard;
+use ZPMLabs\FilamentUndraw\Examples\Pages\UndrawDemoPage;
+
+$panel->pages([
+	Dashboard::class,
+	UnlayerFilamentDemoPage::class,
+	UndrawDemoPage::class,
+]);
+```
+
+Example field presets used on the page:
+
+```php
+use ZPMLabs\FilamentUndraw\Forms\Components\UndrawSelect;
+
+UndrawSelect::make('hero_illustration')
+	->label('Hero illustration')
+	->live();
+
+UndrawSelect::make('compact_illustration')
+	->label('Compact illustration')
+	->searchResultSize('w-24 h-24')
+	->selectedOptionSize('w-24 h-24')
+	->limit(12);
+```
 
 ## Expanding Undraw Usage
 
